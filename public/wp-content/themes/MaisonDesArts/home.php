@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="page">
-    <?php echo "home.php test";?>
+    <?php echo "home.php";?>
 <?php 
 if(have_posts()){
     while(have_posts()){
