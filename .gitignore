@@ -2,4 +2,4 @@
 **/.git
 node_modules/
 **/.css
-public/wp-config.php
+**/.wp-config.php
