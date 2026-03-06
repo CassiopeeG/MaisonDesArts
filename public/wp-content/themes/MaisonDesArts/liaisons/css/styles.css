@@ -792,8 +792,6 @@ Ajuster selon le besoin  */
   display: block;
   padding: 5px 10px;
   width: 100%;
-  /*     outline: none;
-       border-left: 5px solid #f5ae09;*/
 }
 .menu-item a:link, .menu-item a:visited {
   text-decoration: none;
@@ -804,6 +802,10 @@ Ajuster selon le besoin  */
 }
 .menu-item a--actif {
   border-left: 5px solid #f4d07c;
+}
+.menu-item a {
+  /*     outline: none;
+       border-left: 5px solid #f5ae09;*/
 }
 
 /* Liste du menu */
