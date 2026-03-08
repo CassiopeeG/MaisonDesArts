@@ -16,6 +16,7 @@
 <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/public/wp-content/themes/MaisonDesArts/liaisons/css/styles.css"/>  ici test -->
 <?php wp_head(); ?>
 </head>
+
 <body>
     <?php echo "header.php";?>
 <header class="entente">

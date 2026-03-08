@@ -19,16 +19,17 @@
 .navigation{
     max-width: 960px;
     margin: 0 auto;
+    background-color: #CEE4FB;
     &__controle {
-        background-color: #d9d7d0;
+        background-color: #CEE4FB;
         border: none;
         padding: 10px;
         min-width: 40px;
         &:hover{
-            background-color: #f5ae09;
+            background-color: #CEE4FB;
         }
         &:active{
-            background-color: #f1acb1;
+            background-color: #CEE4FB;
         }
         &:focus{
             /**
@@ -39,7 +40,7 @@
              * MAIS il faut souligner l'état focus et le tester au clavier.
              */
             outline-offset: -5px;
-            outline: #f5ae09 auto 5px;
+            outline: #5E7390 auto 5px;
         }
         @media (min-width: 601px) {
             display: none;
@@ -49,7 +50,6 @@
 
 /* Liens du menu */
 .menu-item a {
-    background-color: #d9d7d0;
     display: block;
     padding: 5px 10px;
     width: 100%;
@@ -59,7 +59,7 @@
         color: inherit;
     }
     &:active, &:hover {
-        background-color: #f5ae09;
+        text-decoration: underline;
     }
 
     &--actif {

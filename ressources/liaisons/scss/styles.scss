@@ -12,14 +12,19 @@
 
 /**** UTILITAIRES ****/
 @import 'utilitaires/utilitaires';
+
 /****** BASE ******/
+
 /** Typographie **/
 @import 'base/typo';
+
 @import 'base/nouvelles';
+
 /****** LAYOUT ******/
 @import 'base/grille';
 
 /****** MODULES ******/
+
 /** Menu responsive **/
 @import 'modules/menuwp';
 

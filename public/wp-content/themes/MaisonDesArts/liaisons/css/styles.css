@@ -756,18 +756,19 @@ Ajuster selon le besoin  */
 .navigation {
   max-width: 960px;
   margin: 0 auto;
+  background-color: #CEE4FB;
 }
 .navigation__controle {
-  background-color: #d9d7d0;
+  background-color: #CEE4FB;
   border: none;
   padding: 10px;
   min-width: 40px;
 }
 .navigation__controle:hover {
-  background-color: #f5ae09;
+  background-color: #CEE4FB;
 }
 .navigation__controle:active {
-  background-color: #f1acb1;
+  background-color: #CEE4FB;
 }
 .navigation__controle:focus {
   /**
@@ -778,7 +779,7 @@ Ajuster selon le besoin  */
    * MAIS il faut souligner l'état focus et le tester au clavier.
    */
   outline-offset: -5px;
-  outline: #f5ae09 auto 5px;
+  outline: #5E7390 auto 5px;
 }
 @media (min-width: 601px) {
   .navigation__controle {
@@ -788,7 +789,6 @@ Ajuster selon le besoin  */
 
 /* Liens du menu */
 .menu-item a {
-  background-color: #d9d7d0;
   display: block;
   padding: 5px 10px;
   width: 100%;
@@ -798,7 +798,7 @@ Ajuster selon le besoin  */
   color: inherit;
 }
 .menu-item a:active, .menu-item a:hover {
-  background-color: #f5ae09;
+  text-decoration: underline;
 }
 .menu-item a--actif {
   border-left: 5px solid #f4d07c;
@@ -840,6 +840,4 @@ Ajuster selon le besoin  */
   .js .navigation--ferme .menu {
     max-height: none;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
