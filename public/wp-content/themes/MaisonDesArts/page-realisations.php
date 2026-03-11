@@ -1,79 +1,83 @@
 <?php
-/* Template name: Réalisations */
-get_header(); //Appel de l'inclusion d'entête de page
-echo "page.php";
+/* Template Name: Réalisations */
+get_header();
 ?>
 
-    <main class="page">
+<main class="page-realisations">
 
-        <?php //var_dump($post); //Ce que reçoit la page?>
-
-        <div>
-            <h2><?php the_title() //fonction native WP?></h2>
-            <h2><?php //echo $post->post_title  //Façon alternative en utilisant la variable $post?></h2>
-            <h2><?php the_title() //fonction native WP?></h2>
+    <section class="page-header">
+        <h1><?php the_title(); ?></h1>
+        <div class="page-description">
+            <?php the_content(); ?>
         </div>
-        <p>
-           <?php  the_content() ?>
-           <?php  //echo $post->post_content; ?>
-        </p>
+    </section>
 
-    </main>
 
-<?php get_footer()?>
+<?php
+$posts = get_posts(array(
+    'posts_per_page' => -1,
+    'post_type' => 'realisations',
+    'post_status' => 'publish',
+    'orderby' => 'title',
+    'order' => 'ASC',
+));
 
-      <?php
-        //Requête et boucle d'affichage des articles avec ACF
-        //À mettre dans les pages utilisant les articles personnalisés et adapter****************
-        $posts = get_posts(array(
-            'posts_per_page' => -1,
-            'post_type'	=> 'realisations',
-            'post_status' => 'publish',
-            'orderby' => 'the_title',
-            'order' => 'ASC',
-        ));
+if($posts){
+    foreach ($posts as $post){
+        setup_postdata($post);
+?>
 
-       // var_dump($posts);
+    <article class="realisation">
 
-        if(have_posts()){
-            //tant qu'il restera des articles
-            foreach ($posts as $post){?>
-                <article class="article">
-                    <header class="article__entete">
-                        <h2 class="article__titre">
-                            <?php //affiche le lien et le titre de l'article'?>
-                            <a class="article__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
-                        </h2>
-                    </header>
-                    <?php
+        <h2 class="realisation__titre">
+            <a href="<?php the_permalink();?>">
+                <?php the_title(); ?>
+            </a>
+        </h2>
 
-                    $image_info=get_field("photo_1");
 
-                    //Si l'image est définie dans ACF
-                    if($image_info!=null){
+        <div class="realisation__image">
 
-                        //Utiliser la balise picture pour le redimensionnement de l'image ?>
-                        <picture>
-                            <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
-                            <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
-                            <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
-                        </picture>
+        <?php
+        $image_info = get_field("photo_1");
 
-                    <?php }?>
+        if($image_info){ ?>
 
-                    <p><?php echo get_field("nom_client")?></p>
+            <picture>
+                <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']['large']; ?>">
+                <source media="(min-width: 600px)" srcset="<?php echo $image_info['sizes']['medium']; ?>">
+                <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" alt="<?php echo $image_info['alt']; ?>">
+            </picture>
 
-                    <p class="article__texte">
-                        <?php //affiche le l'extrait de la réalisation
-                        the_excerpt();
-                        ?>
-                    </p>
+        <?php } ?>
 
-                    <p> Teeeeeeeeeeeeeeeest </p>
-                </article>
-            <?php }
+        </div>
 
-            //réinitialise les données reçues par défaut du gabarit pour afficher le
-            //reste des informations de la page, s'il y a lieu
-            //wp_reset_postdata();
-        }?>
+
+        <div class="realisation__contenu">
+
+            <p class="realisation__client">
+                <?php echo get_field("nom_client"); ?>
+            </p>
+
+            <div class="realisation__texte">
+                <?php the_excerpt(); ?>
+            </div>
+
+            <div class="realisation__date">
+                <?php echo get_the_date(); ?>
+            </div>
+
+        </div>
+
+    </article>
+
+<?php
+    }
+    wp_reset_postdata();
+}
+?>
+
+</main>
+
+<?php get_footer(); ?>
