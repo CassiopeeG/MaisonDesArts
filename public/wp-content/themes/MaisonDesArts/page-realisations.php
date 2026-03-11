@@ -67,6 +67,8 @@ echo "page.php";
                         the_excerpt();
                         ?>
                     </p>
+
+                    <p> Teeeeeeeeeeeeeeeest </p>
                 </article>
             <?php }
 
