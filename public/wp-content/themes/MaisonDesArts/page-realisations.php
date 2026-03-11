@@ -5,6 +5,7 @@ get_header();
 
 <main class="page-realisations">
 
+    <!-- Titre de la page -->
     <section class="page-header">
         <h1><?php the_title(); ?></h1>
         <div class="page-description">
@@ -29,6 +30,7 @@ if($posts){
 
     <article class="realisation">
 
+        <!-- Titre -->
         <h2 class="realisation__titre">
             <a href="<?php the_permalink();?>">
                 <?php the_title(); ?>
@@ -36,6 +38,7 @@ if($posts){
         </h2>
 
 
+        <!-- Image -->
         <div class="realisation__image">
 
         <?php
@@ -54,6 +57,7 @@ if($posts){
         </div>
 
 
+        <!-- Bloc texte bleu comme ton design -->
         <div class="realisation__contenu">
 
             <p class="realisation__client">
