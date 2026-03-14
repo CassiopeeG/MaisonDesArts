@@ -18,15 +18,15 @@
 </head>
 
 <body>
-    <?php echo "header.php";?>
+    <!-- <?php echo "header.php";?> -->
 <header class="entente">
     <h1 class=entete_titre>
-       <a href="<?php bloginfo("url");?>" title="<?php bloginfo("name");?>"><?php bloginfo("name"); ?> - LOCAL</a>
+       <a href="<?php bloginfo("url");?>" title="<?php bloginfo("name");?>"><?php bloginfo("name"); ?> - Local</a>
     </h1>
     <h2 class="entete__slogan"><?php bloginfo("description");?></h2>
 </header>
 <?php if(has_nav_menu('principal')){?>
-<nav class="navigation">
+<nav id="principal" class="navigation menu__principal">
     <?php wp_nav_menu(array('theme_location' => 'principal'));?>
 </nav>
 <?php } ?>
