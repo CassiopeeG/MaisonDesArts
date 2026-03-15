@@ -1,7 +1,7 @@
 </div aria-label="Pied de page">
 <!-- <?php echo "footer.php"; ?> -->
 <footer class="pied_de_page">
-    <img src="./liaisons/images/logoGrand.png" alt="Accueil">
+    <img class="logo" src="<?php echo get_template_directory_uri();?>/liaisons/images/logoGrand.png" alt="Accueil">
 
     <form action="" method="POST">
         <label for="email">Courriel:</label><br>
