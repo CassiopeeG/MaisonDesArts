@@ -6,27 +6,35 @@
  * @todo Compléter selon l'énoncé de l'exercice
  */
 
-/****** Librairies ******/
+/****** ------- UTILITAIRES ------- ******/
 /** Normalize **/
 @import 'utilitaires/normalize';
 
 /**** UTILITAIRES ****/
 @import 'utilitaires/utilitaires';
 
-/****** BASE ******/
 
+/****** ------- BASE ------- ******/
 /** Typographie **/
 @import 'base/typo';
 
-@import 'base/nouvelles';
-
-/****** LAYOUT ******/
+// Grille
 @import 'base/grille';
 
-/****** MODULES ******/
+// Accueil
+@import 'base/accueil';
 
+// Nouvelles
+@import 'base/nouvelles';
+
+
+
+
+
+/****** ------- MODULES ------- ******/
 /** Menu responsive **/
 @import 'modules/menuwp';
 
-
+/** Menu responsive **/
+@import 'modules/footer';
 

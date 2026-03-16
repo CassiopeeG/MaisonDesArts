@@ -4,7 +4,7 @@
  * @todo Lier les modules avec des instructions @import
  * @todo Compléter selon l'énoncé de l'exercice
  */
-/****** Librairies ******/
+/****** ------- UTILITAIRES ------- ******/
 /** Normalize **/
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -456,7 +456,7 @@ html {
   width: auto;
 }
 
-/****** BASE ******/
+/****** ------- BASE ------- ******/
 /** Typographie **/
 /**** Typographie responsive (Mobile First) ****/
 /**
@@ -630,7 +630,6 @@ span.controleur i:after {
   content: " ";
 }
 
-/****** LAYOUT ******/
 /**** Grille ****/
 /**** Mini système de grilles fluides MOBILE FIRST ****/
 .conteneur {
@@ -736,7 +735,11 @@ Ajuster selon le besoin  */
     visibility: hidden;
   }
 }
-/****** MODULES ******/
+.logo {
+  max-width: 190px;
+}
+
+/****** ------- MODULES ------- ******/
 /** Menu responsive **/
 /**
  * @author Prénom Nom courriel
@@ -842,4 +845,11 @@ Ajuster selon le besoin  */
   }
 }
 
+<<<<<<< HEAD
 /*# sourceMappingURL=styles.css.map */
+=======
+/** Menu responsive **/
+.pied_de_page {
+  background-color: #5E7390;
+}/*# sourceMappingURL=styles.css.map */
+>>>>>>> refs/remotes/origin/main
