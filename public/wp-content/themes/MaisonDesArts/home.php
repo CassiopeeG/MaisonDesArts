@@ -16,7 +16,7 @@ if(have_posts()){
 </h3>
 <header>
     <p class="article__texte">
-        <?php the_content();
+        <?php the_excerpt();
         ?>
         </p>
          <?php if(has_post_thumbnail()){?>
