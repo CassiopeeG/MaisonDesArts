@@ -1,11 +1,11 @@
 <?php
-/* Template Name: Réalisations */
+/* Template Name: Volets */
 get_header();
 
-// echo "single-realisations.php";
+echo "single-volets.php";
 ?>
 
-<main class="page-realisations">
+<main class="page-volets">
 
     <!-- Titre de la page -->
     <section class="page-header">
@@ -19,7 +19,7 @@ get_header();
 <?php
 $posts = get_posts(array(
     'posts_per_page' => -1,
-    'post_type' => 'realisations',
+    'post_type' => 'volets',
     'post_status' => 'publish',
     'orderby' => 'title',
     'order' => 'ASC',
@@ -30,10 +30,10 @@ if($posts){
         setup_postdata($post);
 ?>
 
-    <article class="realisation">
+    <article class="volet">
 
         <!-- Titre -->
-        <h2 class="realisation__titre">
+        <h2 class="volet__titre">
             <a href="<?php the_permalink();?>">
                 <?php the_title(); ?>
             </a>
@@ -41,7 +41,7 @@ if($posts){
 
 
         <!-- Image -->
-        <div class="realisation__image">
+        <div class="volet__image">
 
         <?php
         $image_info = get_field("photo_1");
@@ -60,17 +60,17 @@ if($posts){
 
 
         <!-- Bloc texte bleu comme ton design -->
-        <div class="realisation__contenu">
+        <div class="volet__contenu">
 
-            <p class="realisation__client">
+            <p class="volet__client">
                 <?php echo get_field("nom_client"); ?>
             </p>
 
-            <div class="realisation__texte">
+            <div class="volet__texte">
                 <?php the_excerpt(); ?>
             </div>
 
-            <div class="realisation__date">
+            <div class="volet__date">
                 <?php echo get_the_date(); ?>
             </div>
 
