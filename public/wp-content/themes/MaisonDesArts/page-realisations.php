@@ -2,7 +2,7 @@
 /* Template Name: Réalisations */
 get_header();
 
-echo "page.php";
+// echo "single-realisations.php";
 ?>
 
 <main class="page-realisations">
