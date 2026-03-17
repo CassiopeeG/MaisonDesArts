@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * @author Cassiopée Gariépy
+ * @author Cassiopée Gariépy, Alice Tremblay et Moussa Said Awali
  * @todo Lier les modules avec des instructions @import
  * @todo Compléter selon l'énoncé de l'exercice
  */
@@ -460,7 +460,7 @@ html {
 /** Typographie **/
 /**** Typographie responsive (Mobile First) ****/
 /**
- * @author Prénom Nom courriel
+ * @author Cassiopée Gariépy, Alice Tremblay et Moussa Said Awali
 **/
 /**
  * TABLE DES MATIÈRES
@@ -475,31 +475,48 @@ html {
 /* Écran moyen : de 600 à 1000px */
 /* Écran large : 1000px et + */
 /** Polices **/
-/*@font-face {
-    font-family: NewsCycle-bold;
-    src:url(../polices/News_Cycle/NewsCycle-bold.woff) format('woff'),
-        url(../polices/News_Cycle/NewsCycle-bold.woff2)format('woff2'),
-        url(../polices/News_Cycle/NewsCycle-bold.ttf) format('truetype');
+@font-face {
+  font-family: "Verve";
+  src: url(../fonts/Verve.ttf) format("truetype");
 }
 @font-face {
-    font-family: NewsCycle;
-    src:url(../polices/News_Cycle/NewsCycle-Regular.woff) format('woff'),
-    url(../polices/News_Cycle/NewsCycle-Regular.woff2)format('woff2'),
-    url(../polices/News_Cycle/NewsCycle-Regular.ttf) format('truetype');
+  font-family: "SwankyandMooMoo";
+  src: url(../fonts/SwankyandMooMoo.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Aleo";
+  src: url(../fonts/Aleo-VariableFont_wght.ttf) format("truetype");
 }
 h1,
-.h1,
+.h1 {
+  font-family: "Verve", serif;
+  line-height: 0;
+  padding-top: 1em;
+}
+
+h1 a,
+.h1 a {
+  color: black;
+  text-decoration: none;
+}
+
 h2,
-.h2,
+.h2 {
+  font-family: "SwankyandMooMoo", sans-serif;
+  font-weight: 300;
+}
+
 h3,
 .h3,
 h4,
 .h4 {
-    font-family: NewsCycle-bold, sans-serif ;
+  font-family: Aleo, sans-serif;
 }
-body{
-    font-family: NewsCycle, sans-serif ;
-}*/
+
+body {
+  font-family: Aleo, sans-serif;
+}
+
 /** Base décimale **/
 html {
   font-size: 62.5%;
@@ -526,69 +543,69 @@ body {
 /** Hiérarchie responsive **/
 /*  plus proche = plus petit  &  plus loin = plus grand */
 h1,
-.h1 { /* = 32px */
-  font-size: 32px;
-  font-size: 3.2rem;
+.h1 { /* = 40px */
+  font-size: 40px;
+  font-size: 4rem;
 }
 
 @media (min-width: 600px) {
   h1,
-  .h1 { /* = 40px */
-    font-size: 40px;
-    font-size: 4rem;
+  .h1 { /* = 50px */
+    font-size: 50px;
+    font-size: 5rem;
   }
 }
 @media (min-width: 1000px) {
   h1,
-  .h1 { /* = 48px */
-    font-size: 48px;
-    font-size: 4.8rem;
+  .h1 { /* = 70px */
+    font-size: 70px;
+    font-size: 7rem;
   }
 }
 h2,
-.h2 { /* = 24px */
-  font-size: 24px;
-  font-size: 2.4rem;
+.h2 { /* = 26px */
+  font-size: 26px;
+  font-size: 2.6rem;
 }
 
 @media (min-width: 600px) {
   h2,
-  .h2 { /* = 32px */
-    font-size: 32px;
-    font-size: 3.2rem;
-  }
-}
-@media (min-width: 1000px) {
-  h2,
-  .h2 { /* = 36px */
-    font-size: 36px;
-    font-size: 3.6rem;
-  }
-}
-h3,
-.h3 { /* = 18px */
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-
-@media (min-width: 600px) {
-  h3,
-  .h3 { /* = 24px */
-    font-size: 24px;
-    font-size: 2.4rem;
-  }
-}
-@media (min-width: 1000px) {
-  h3,
-  .h3 { /* = 30px */
+  .h2 { /* = 30px */
     font-size: 30px;
     font-size: 3rem;
   }
 }
+@media (min-width: 1000px) {
+  h2,
+  .h2 { /* = 40px */
+    font-size: 40px;
+    font-size: 4rem;
+  }
+}
+h3,
+.h3 { /* = 20px */
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+@media (min-width: 600px) {
+  h3,
+  .h3 { /* = 20px */
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1000px) {
+  h3,
+  .h3 { /* = 40px */
+    font-size: 40px;
+    font-size: 4rem;
+  }
+}
 h4,
-.h4 { /* = 16px */
-  font-size: 16px;
-  font-size: 1.6rem;
+.h4 { /* = 18px */
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 @media (min-width: 600px) {
@@ -600,9 +617,9 @@ h4,
 }
 @media (min-width: 1000px) {
   h4,
-  .h4 { /* = 22px */
-    font-size: 22px;
-    font-size: 2.2rem;
+  .h4 { /* = 20px */
+    font-size: 20px;
+    font-size: 2rem;
   }
 }
 /**** CONTRÔLE de la longueur des lignes ****/
@@ -739,6 +756,10 @@ Ajuster selon le besoin  */
   max-width: 190px;
 }
 
+.banniere {
+  width: 100%;
+}
+
 /****** ------- MODULES ------- ******/
 /** Menu responsive **/
 /**
@@ -757,7 +778,7 @@ Ajuster selon le besoin  */
 /****** Base commune *******/
 /* Bouton du menu (injecté par JavaScript)*/
 .navigation {
-  max-width: 960px;
+  max-width: 100%;
   margin: 0 auto;
   background-color: #CEE4FB;
 }
@@ -813,6 +834,7 @@ Ajuster selon le besoin  */
 
 /* Liste du menu */
 .menu {
+  text-align: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -821,6 +843,7 @@ Ajuster selon le besoin  */
 
 @media (min-width: 601px) {
   .menu-item {
+    padding: 10px;
     display: inline-block;
   }
 }
@@ -848,6 +871,4 @@ Ajuster selon le besoin  */
 /** Menu responsive **/
 .pied_de_page {
   background-color: #5E7390;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

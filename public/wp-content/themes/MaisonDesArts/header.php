@@ -28,20 +28,8 @@
     <?php } ?>
 
     <!-- Image bannière -->
-     Ici mettre image bannière
-    <?php
-    // $image_info=get_field("banniere");
+    <img class="banniere" src="<?php echo get_template_directory_uri();?>/liaisons/images/banniere.png" alt="">
     
-    //Si l'image est définie dans ACF
-    if($image_info!=null){
-        //Utiliser la balise picture pour le redimensionnement de l'image ?>
-        <picture>
-            <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
-            <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
-            <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
-        </picture>
-    <?php }?>
-
     <!-- Titres -->
     <h1 class=entete_titre>
        <a href="<?php bloginfo("url");?>" title="<?php bloginfo("name");?>">La <?php bloginfo("name"); ?> - Local</a>

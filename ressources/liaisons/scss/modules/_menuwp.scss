@@ -17,7 +17,7 @@
 
 /* Bouton du menu (injecté par JavaScript)*/
 .navigation{
-    max-width: 960px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: #CEE4FB;
     &__controle {
@@ -76,6 +76,8 @@
 
 /* Liste du menu */
 .menu {
+    text-align: center;
+    
     margin: 0;
     padding: 0;
     list-style: none;
@@ -84,6 +86,8 @@
 }
 .menu-item {
     @media (min-width: 601px) {
+        padding: 10px;
+
         display: inline-block;
     }
 }
