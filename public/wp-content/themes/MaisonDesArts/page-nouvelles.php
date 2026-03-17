@@ -16,72 +16,41 @@ echo "page-nouvelles.php";
     </section>
 
 
+
 <?php
 $posts = get_posts(array(
     'posts_per_page' => -1,
     'post_type' => 'post',
     'post_status' => 'publish',
-    'orderby' => 'title',
-    'order' => 'ASC',
+    'orderby' => 'date',
+    'order' => 'DESC',
 ));
 
-var_dump($posts);
-
 if($posts){
-    foreach ($posts as $post){
-        setup_postdata($post);
-?>
+    foreach($posts as $post){
+        setup_postdata($post); ?>
+        
+        <article class="article">
+            <header class="article__entente">
+                <h3 class="article_titre">
+                    <a class="article__lien" href="<?php the_permalink();?>">
+                        <?php the_title(); ?>
+                    </a>
+                </h3>
+            </header>
 
-    <article class="nouvelle">
-
-        <!-- Titre -->
-        <h2 class="nouvelle__titre">
-            <a href="<?php the_permalink();?>">
-                <?php the_title(); ?>
-            </a>
-        </h2>
-
-
-        <!-- Image -->
-        <div class="nouvelle__image">
-
-        <?php
-        // $image_info = get_field("photo_1");
-
-        if($image_info){ ?>
-
-            <picture>
-                <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']['large']; ?>">
-                <source media="(min-width: 600px)" srcset="<?php echo $image_info['sizes']['medium']; ?>">
-                <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" alt="<?php echo $image_info['alt']; ?>">
-            </picture>
-
-        <?php } ?>
-
-        </div>
-
-
-        <!-- Bloc texte bleu comme ton design -->
-        <div class="nouvelle__contenu">
-
-            <!-- <p class="nouvelle__client">
-                <?php echo get_field("nom_client"); ?>
-            </p> -->
-
-            <div class="nouvelle__texte">
+            <p class="article__texte">
                 <?php the_excerpt(); ?>
-            </div>
+            </p>
 
-            <div class="nouvelle__date">
-                <?php echo get_the_date(); ?>
-            </div>
+            <?php if(has_post_thumbnail()){ ?>
+                <div class="article__imageUne">
+                    <?php the_post_thumbnail("medium"); ?>
+                </div>
+            <?php } ?>
+        </article>
 
-        </div>
-
-    </article>
-
-<?php
-    }
+    <?php }
     wp_reset_postdata();
 }
 ?>
