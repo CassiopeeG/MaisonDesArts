@@ -2,7 +2,7 @@
 /* Template Name: Nouvelles */
 get_header();
 
-echo "single-nouvelles.php";
+echo "page-nouvelles.php";
 ?>
 
 <main class="page-nouvelles">
@@ -19,11 +19,13 @@ echo "single-nouvelles.php";
 <?php
 $posts = get_posts(array(
     'posts_per_page' => -1,
-    'post_type' => 'nouvelles',
+    'post_type' => 'post',
     'post_status' => 'publish',
     'orderby' => 'title',
     'order' => 'ASC',
 ));
+
+var_dump($posts);
 
 if($posts){
     foreach ($posts as $post){
@@ -44,7 +46,7 @@ if($posts){
         <div class="nouvelle__image">
 
         <?php
-        $image_info = get_field("photo_1");
+        // $image_info = get_field("photo_1");
 
         if($image_info){ ?>
 
@@ -62,9 +64,9 @@ if($posts){
         <!-- Bloc texte bleu comme ton design -->
         <div class="nouvelle__contenu">
 
-            <p class="nouvelle__client">
+            <!-- <p class="nouvelle__client">
                 <?php echo get_field("nom_client"); ?>
-            </p>
+            </p> -->
 
             <div class="nouvelle__texte">
                 <?php the_excerpt(); ?>
