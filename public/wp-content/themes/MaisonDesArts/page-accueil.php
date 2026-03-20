@@ -20,9 +20,9 @@ echo "page-accueil.php";
         <?php  the_content() ?>
     </p>
     
-    <h2>Section Nouvelles</h2>
-    
-    <?php 
+    <section class="nouvelles">
+        <h2>Section Nouvelles</h2>
+            <?php 
     if(have_posts()){
         while(have_posts()){
             the_post();?>
@@ -43,19 +43,16 @@ echo "page-accueil.php";
                         the_post_thumbnail("medium"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
                     </div><?php 
                     } ?>
-        <article>
-            <?php } } ?>
+            <article>
+        <?php } } ?>
+    </section>
 
-            <section>
-
-            </section>
-
+    <section class="volets">
         <h2>Section Volets</h2>
 
-    <ul class="volets">
-      <?php
-        //Requête et boucle d'affichage des articles avec ACF
-        //À mettre dans les pages utilisant les articles personnalisés et adapter****************
+        <ul class="liste_volets">
+            
+        <?php
         $posts = get_posts(array(
             'posts_per_page' => -1,
             'post_type'	=> 'services',
@@ -74,7 +71,7 @@ echo "page-accueil.php";
                 </li>
             <?php }}?>
         </ul>
+    </section>
 </main>
-
 
 <?php get_footer(); ?>

@@ -20,7 +20,7 @@
         <img src="" alt="logo facebook">
         <img src="" alt="logo linkedin">
         
-    <?php the_field("linkedin", 38); ?>
+    <!-- <?php the_field("linkedin", 38); ?> -->
 
     </div>
 

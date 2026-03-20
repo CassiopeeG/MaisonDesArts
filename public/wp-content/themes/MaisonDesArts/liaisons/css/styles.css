@@ -764,8 +764,18 @@ Ajuster selon le besoin  */
   text-align: center;
 }
 
+.entete_slogan {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.entete_slogan figure {
+  margin: 0;
+}
+
 .entete_slogan div {
   margin-top: 1em;
+  padding: 1em;
   background-color: #CEE4FB;
 }
 

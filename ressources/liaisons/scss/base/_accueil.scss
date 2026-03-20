@@ -14,9 +14,19 @@
     text-align: center;
 }
 
+//Slogan
+.entete_slogan{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.entete_slogan figure{
+    margin: 0;
+}
+
 .entete_slogan div{
     margin-top: 1em;
-    // padding: 10px;
+    padding: 1em;
     background-color: #CEE4FB;
 }
 
@@ -54,4 +64,8 @@
 //Sections
 .nouvelles{
     background-color: burlywood;
+}
+
+.volets{
+    
 }
