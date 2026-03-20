@@ -45,7 +45,7 @@ if($posts){
 
             <?php if(has_post_thumbnail()){ ?>
                 <div class="article__imageUne">
-                    <?php the_post_thumbnail("medium"); ?>
+                    <?php the_post_thumbnail("small"); ?>
                 </div>
             <?php } ?>
         </article>
