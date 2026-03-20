@@ -32,11 +32,11 @@ if($posts){
         
         <article class="article">
             <header class="article__entente">
-                <h3 class="article_titre">
+                <h2 class="article_titre">
                     <a class="article__lien" href="<?php the_permalink();?>">
                         <?php the_title(); ?>
                     </a>
-                </h3>
+                </h2>
             </header>
 
             <p class="article__texte">

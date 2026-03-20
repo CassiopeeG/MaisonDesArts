@@ -9,7 +9,7 @@ echo "single.php";
    // var_dump($post); //Ce que reçoit la page?>
     <article class="article">
         <header class="article__entete">
-            <h2 class="article__titre"><?php the_title() ?></h2>
+            <h1 class="article__titre"><?php the_title() ?></h1>
         </header>
 		
 		
