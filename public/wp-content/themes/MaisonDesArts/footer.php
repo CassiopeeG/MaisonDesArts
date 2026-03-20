@@ -20,6 +20,8 @@
         <p>lepresbytere.arts@gmail.com</p>
         <img src="" alt="logo facebook">
         <img src="" alt="logo linkedin">
+    <?php the_field("linkedin", 38); ?>
+
     </div>
 
     <p>Un projet culturel en développement, porté par et pour la communauté.</p>

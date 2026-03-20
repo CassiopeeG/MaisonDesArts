@@ -2,6 +2,28 @@
     max-width: 190px;
 }
 
-.banniere{
+.banniere img{
     width: 100%;
+    height: auto;
+}
+
+.entete_titre{
+    text-align: center;
+}
+
+.entete_slogan div{
+    margin-top: 1em;
+    // padding: 10px;
+    background-color: #CEE4FB;
+}
+
+@media (min-width: 600px){
+    .entete_slogan div{
+        margin-top: 0em;
+        margin-left: 1em;
+    }
+}
+
+.nouvelles{
+    background-color: burlywood;
 }
