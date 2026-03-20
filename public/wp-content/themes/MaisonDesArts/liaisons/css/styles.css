@@ -755,8 +755,28 @@ Ajuster selon le besoin  */
   max-width: 190px;
 }
 
-.banniere {
+.banniere img {
   width: 100%;
+  height: auto;
+}
+
+.entete_titre {
+  text-align: center;
+}
+
+.entete_slogan div {
+  margin-top: 1em;
+  background-color: #CEE4FB;
+}
+
+@media (min-width: 600px) {
+  .entete_slogan div {
+    margin-top: 0em;
+    margin-left: 1em;
+  }
+}
+.nouvelles {
+  background-color: burlywood;
 }
 
 /****** ------- MODULES ------- ******/
@@ -870,33 +890,4 @@ Ajuster selon le besoin  */
 /** Menu responsive **/
 .pied_de_page {
   background-color: #5E7390;
-}
-
-.nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
-  display: flex;
-}
-
-.nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  flex: 1 0 50%;
-}
-
-.nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  text-align: end;
-  flex: 1 0 50%;
-}
-
-.nav-previous:hover {
-  font-weight: bold;
-}
-
-.nav-next:hover {
-  font-weight: bold;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
