@@ -17,7 +17,7 @@ echo "single.php";
  <?php if(has_post_thumbnail()){?>
         <div class="article__imageUne">
             <?php //affiche l'image de l'article
-            the_post_thumbnail("medium"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
+            the_post_thumbnail("large"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
         </div>
 <?php } ?>
 	   
@@ -30,6 +30,16 @@ echo "single.php";
             <h4>Par: <?php the_author(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
             <h4>  Publié le: <?php the_date(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
         </footer>
+
+                    <p>
+                <?php //Version améliorée avec flèche et titre des articles adjacents.
+                the_post_navigation( array(
+                    'prev_text'  => __( '← %title' ),
+                    'next_text'  => __( '%title →' ),
+                ) );
+            ?>
+            </p>
+
     </article>
 
 

@@ -14,12 +14,12 @@
         <p>25 Route 138, Saint-Augustin-de-Desmaures, QC, G3A 1G7</p>
     </div>
 
-
     <div class="contact">
         <p>Nous contacter: </p>
         <p>lepresbytere.arts@gmail.com</p>
         <img src="" alt="logo facebook">
         <img src="" alt="logo linkedin">
+        
     <?php the_field("linkedin", 38); ?>
 
     </div>
