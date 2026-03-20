@@ -1,12 +1,15 @@
+//Logo
 .logo{
     max-width: 190px;
 }
 
+//Bannière
 .banniere img{
     width: 100%;
     height: auto;
 }
 
+//Entete
 .entete_titre{
     text-align: center;
 }
@@ -24,6 +27,31 @@
     }
 }
 
+//À propos
+.a_propos{
+    margin-top: -3em;
+}
+
+.a_propos div{
+    background-image:url(../images/zoneTexte.png);
+    background-size: 100% 100%;
+}
+
+.a_propos div p{
+    padding: 2em;
+}
+
+@media (min-width: 600px){
+    .a_propos{
+        margin-right: 4em;
+    }
+}
+
+.ligne{
+    margin-top: 4em;
+}
+
+//Sections
 .nouvelles{
     background-color: burlywood;
 }
