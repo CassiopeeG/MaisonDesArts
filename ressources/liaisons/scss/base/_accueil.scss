@@ -1,3 +1,8 @@
+//Enlève le margin-top étrange, ajouté par Wordpress. 
+html {
+  margin-top: 0 !important;
+}
+
 //Logo
 .logo{
     max-width: 190px;
@@ -9,7 +14,7 @@
     height: auto;
 }
 
-//Entete
+//Entête
 .entete_titre{
     text-align: center;
 }
@@ -39,7 +44,12 @@
 
 //À propos
 .a_propos{
-    margin-top: -3em;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.a_propos figure{
+    margin: 0;
 }
 
 .a_propos div{
@@ -57,6 +67,7 @@
     }
 }
 
+//Ligne
 .ligne{
     margin-top: 4em;
 }

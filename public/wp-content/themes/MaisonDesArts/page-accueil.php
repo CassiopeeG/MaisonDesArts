@@ -1,7 +1,6 @@
 <?php
 /* Template name: Accueil */
 get_header(); //Appel de l'inclusion d'entête de page
-echo "page-accueil.php";
 ?>
 
 <?php if(has_post_thumbnail()){ ?>
