@@ -3,10 +3,10 @@
 get_header();
 ?>
 
-<main class="page">
+<main class="page_volets">
 
     <div>
-        <h2><?php the_title(); ?></h2>
+        <h2 class= ' test'> <?php the_title(); ?></h2>
     </div>
 
     <p>
