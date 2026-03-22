@@ -106,4 +106,10 @@ add_action( 'init', 'agence_equipe_custom_post', 0 );
     if(function_exists('add_theme_support')){
         add_theme_support('post-thumbnails');
     }
+
+
+/* Ajout de nouveaux formats d'images générés par WordPress */
+if(function_exists ( "add_image_size" )){
+add_image_size( "image-article", 550, 400, true);
+}
 ?>

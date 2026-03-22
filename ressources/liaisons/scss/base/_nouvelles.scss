@@ -1,3 +1,33 @@
-.article__imageUne{
 
+.container-articles {
+        grid-template-columns: 1fr;
+    }
+
+@media (min-width: 600px) {
+.container-articles {
+     display: grid; 
+     grid-template-columns: repeat(2, 1fr); 
+     gap: 40px; 
+    }
+
+    /* LIGNE SOUS TITRE */
+.article_titre::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #3a1f1f;
+    margin-top: 15px;
+}
+}
+
+/* LIEN */
+.article__lien {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.article__lien::after {
+    content: " →";
+    margin-left: 8px;
 }

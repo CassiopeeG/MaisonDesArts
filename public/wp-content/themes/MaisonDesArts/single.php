@@ -17,7 +17,8 @@ echo "single.php";
  <?php if(has_post_thumbnail()){?>
         <div class="article__imageUne">
             <?php //affiche l'image de l'article
-            the_post_thumbnail("large"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
+            the_post_thumbnail("full"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
+
         </div>
 <?php } ?>
 	   

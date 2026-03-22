@@ -26,16 +26,4 @@
         <?php wp_nav_menu(array('theme_location' => 'principal'));?>
     </nav>
     <?php } ?>
-
-    <!-- Image bannière -->
-    <img class="banniere" src="<?php echo get_template_directory_uri();?>/liaisons/images/banniere.png" alt="">
-    
-    <!-- Titres -->
-    <h1 class=entete_titre>
-       <a href="<?php bloginfo("url");?>" title="<?php bloginfo("name");?>">La <?php bloginfo("name"); ?> - Local</a>
-    </h1>
-    <h2>de Saint-Augustin-de-Desmaures</h2>
-    <h2 class="entete__slogan"><?php bloginfo("description");?></h2>
 </header>
-
-<div class="contenu">

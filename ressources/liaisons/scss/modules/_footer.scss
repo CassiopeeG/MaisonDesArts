@@ -1,3 +1,75 @@
-.pied_de_page{
+.footer{
     background-color: #5E7390;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 1em;
+    color: white;
+}
+
+.footer__abonnement{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1em;
+    border-bottom: black solid;
+    margin: 0 2em 0 2em;
+}
+
+.courriel{
+    width: 300px;
+}
+
+.courriel, .btn_abonner{
+    padding: 12px; 
+    box-sizing: border-box;
+}
+
+.btn_abonner{
+    width: 150px; 
+    margin-left: 1em;
+    border-radius: 100px;
+    background-color: #F7DE99; 
+    color: rgb(0, 0, 0); 
+    border: none; 
+    cursor: pointer;
+}
+
+.btn_abonner:hover { 
+    background-color: white;
+    border: #D6AB80 solid 3px;
+}
+
+.label{
+    display: none;
+}
+
+.footer__informations{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer__informations div{
+    
+} 
+
+
+.footer__informations-adresse{
+
+}
+
+.footer__informations-contact{
+    border: black solid;
+    border-width: 0 2px 0 2px;
+    padding: 0 2em 0 2em;
+}
+
+.footer__mentions{
+    background-color: #4C5E77;
+    padding: 1em;
 }

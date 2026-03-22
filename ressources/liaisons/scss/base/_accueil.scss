@@ -1,7 +1,82 @@
+//Enlève le margin-top étrange, ajouté par Wordpress. 
+html {
+  margin-top: 0 !important;
+}
+
+//Logo
 .logo{
     max-width: 190px;
 }
 
-.banniere{
+//Bannière
+.banniere img{
     width: 100%;
+    height: auto;
+}
+
+//Entête
+.entete_titre{
+    text-align: center;
+}
+
+//Slogan
+.entete_slogan{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.entete_slogan figure{
+    margin: 0;
+}
+
+.entete_slogan div{
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #CEE4FB;
+}
+
+@media (min-width: 600px){
+    .entete_slogan div{
+        margin-top: 0em;
+        margin-left: 1em;
+    }
+}
+
+//À propos
+.a_propos{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.a_propos figure{
+    margin: 0;
+}
+
+.a_propos div{
+    background-image:url(../images/zoneTexte.png);
+    background-size: 100% 100%;
+}
+
+.a_propos div p{
+    padding: 2em;
+}
+
+@media (min-width: 600px){
+    .a_propos{
+        margin-right: 4em;
+    }
+}
+
+//Ligne
+.ligne{
+    margin-top: 4em;
+}
+
+//Sections
+.nouvelles{
+    background-color: burlywood;
+}
+
+.volets{
+    
 }
