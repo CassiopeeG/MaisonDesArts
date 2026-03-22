@@ -460,7 +460,7 @@ html {
 /** Typographie **/
 /**** Typographie responsive (Mobile First) ****/
 /**
- * @author Cassiopée Gariépy, Alice Tremblay et Moussa Said Awali
+ * @author Cassiopée Gariépy, Alice Tremblay et Moussa Said Awaleh
 **/
 /**
  * TABLE DES MATIÈRES
@@ -849,6 +849,11 @@ html {
 .article__lien::after {
   content: " →";
   margin-left: 8px;
+}
+
+.titre_h2 {
+  font-size: 2rem;
+  color: blue;
 }
 
 /****** ------- MODULES ------- ******/

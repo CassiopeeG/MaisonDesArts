@@ -6,7 +6,7 @@ get_header();
 <main class="page_volets">
 
     <div>
-        <h2 class= ' test'> <?php the_title(); ?></h2>
+        <h2 class= ' titre_h2'> Un lieu culturel complet : nos 4 volets </h2>
     </div>
 
     <p>
