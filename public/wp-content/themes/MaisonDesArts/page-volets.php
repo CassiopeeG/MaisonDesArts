@@ -1,88 +1,64 @@
 <?php
 /* Template Name: Volets */
 get_header();
-
-echo "single-volets.php";
 ?>
 
-<main class="page-volets">
+<main class="page">
 
-    <!-- Titre de la page -->
-    <section class="page-header">
-        <h1><?php the_title(); ?></h1>
-        <div class="page-description">
-            <?php the_content(); ?>
-        </div>
-    </section>
+    <div>
+        <h2><?php the_title(); ?></h2>
+    </div>
 
+    <p>
+        <?php the_content(); ?>
+    </p>
 
-<?php
-$posts = get_posts(array(
-    'posts_per_page' => -1,
-    'post_type' => 'volets',
-    'post_status' => 'publish',
-    'orderby' => 'title',
-    'order' => 'ASC',
-));
+    <?php
+    $posts = get_posts(array(
+        'posts_per_page' => -1,
+        'post_type'      => 'volets',
+        'post_status'    => 'publish',
+        'orderby'        => 'title',
+        'order'          => 'ASC',
+    ));
+    ?>
 
-if($posts){
-    foreach ($posts as $post){
-        setup_postdata($post);
-?>
+    <?php if ($posts) { ?>
+        <?php foreach ($posts as $post) { ?>
+            <?php setup_postdata($post); ?>
 
-    <article class="volet">
+            <article class="article">
+                <header class="article__entete">
+                    <h3 class="article__titre">
+                        <a class="article__lien" href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h3>
+                </header>
 
-        <!-- Titre -->
-        <h2 class="volet__titre">
-            <a href="<?php the_permalink();?>">
-                <?php the_title(); ?>
-            </a>
-        </h2>
+                <?php
+                $image_info = get_field("photo_1", get_the_ID());
+                if ($image_info) { ?>
+                    <div class="article__imageUne">
+                        <img src="<?php echo $image_info['url']; ?>" alt="<?php echo $image_info['alt']; ?>">
+                    </div>
+                <?php } ?>
 
+                <p class="article__texte">
+                    <?php
+                    $texte = get_field("texte_volet", get_the_ID());
+                    echo wp_trim_words(strip_tags($texte), 25, '...');
+                    ?>
+                </p>
 
-        <!-- Image -->
-        <div class="volet__image">
-
-        <?php
-        $image_info = get_field("photo_1");
-
-        if($image_info){ ?>
-
-            <picture>
-                <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']['large']; ?>">
-                <source media="(min-width: 600px)" srcset="<?php echo $image_info['sizes']['medium']; ?>">
-                <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" alt="<?php echo $image_info['alt']; ?>">
-            </picture>
+                <p class="article__date">
+                    <?php echo get_field("date_volet", get_the_ID()); ?>
+                </p>
+            </article>
 
         <?php } ?>
-
-        </div>
-
-
-        <!-- Bloc texte bleu comme ton design -->
-        <div class="volet__contenu">
-
-            <p class="volet__client">
-                <?php echo get_field("nom_client"); ?>
-            </p>
-
-            <div class="volet__texte">
-                <?php the_excerpt(); ?>
-            </div>
-
-            <div class="volet__date">
-                <?php echo get_the_date(); ?>
-            </div>
-
-        </div>
-
-    </article>
-
-<?php
-    }
-    wp_reset_postdata();
-}
-?>
+        <?php wp_reset_postdata(); ?>
+    <?php } ?>
 
 </main>
 
