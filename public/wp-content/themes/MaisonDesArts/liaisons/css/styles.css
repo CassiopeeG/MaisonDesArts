@@ -545,6 +545,7 @@ h1,
 .h1 { /* = 40px */
   font-size: 40px;
   font-size: 4rem;
+  line-height: 1.2;
 }
 
 @media (min-width: 600px) {
@@ -585,6 +586,7 @@ h3,
 .h3 { /* = 20px */
   font-size: 20px;
   font-size: 2rem;
+  font-weight: normal;
 }
 
 @media (min-width: 600px) {
@@ -597,14 +599,15 @@ h3,
 @media (min-width: 1000px) {
   h3,
   .h3 { /* = 40px */
-    font-size: 40px;
-    font-size: 4rem;
+    font-size: 30px;
+    font-size: 3rem;
   }
 }
 h4,
 .h4 { /* = 18px */
   font-size: 18px;
   font-size: 1.8rem;
+  font-weight: normal;
 }
 
 @media (min-width: 600px) {
@@ -766,6 +769,7 @@ html {
 
 .entete_titre {
   text-align: center;
+  margin-bottom: -0.5em;
 }
 
 .entete_slogan {
@@ -801,6 +805,7 @@ html {
 .a_propos div {
   background-image: url(../images/zoneTexte.png);
   background-size: 100% 100%;
+  margin-bottom: 2em;
 }
 
 .a_propos div p {
@@ -817,7 +822,18 @@ html {
 }
 
 .nouvelles {
-  background-color: burlywood;
+  background-image: url(../images/background.png);
+  background-size: 100% 100%;
+  padding: 0.5em 4em 7em 4em;
+}
+
+.nouvelles_titreSection {
+  text-align: center;
+  margin: 1em auto;
+}
+
+.nouvelles_titreSection h2 {
+  margin-bottom: -1em;
 }
 
 .container-articles {
@@ -907,8 +923,6 @@ html {
   display: block;
   padding: 5px 10px;
   width: 100%;
-  /*     outline: none;
-       border-left: 5px solid #f5ae09;*/
 }
 .menu-item a:link, .menu-item a:visited {
   text-decoration: none;
@@ -919,6 +933,10 @@ html {
 }
 .menu-item a--actif {
   border-left: 5px solid #f4d07c;
+}
+.menu-item a {
+  /*     outline: none;
+       border-left: 5px solid #f5ae09;*/
 }
 
 /* Liste du menu */
@@ -1050,6 +1068,4 @@ html {
 
 .nav-next:hover {
   font-weight: bold;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

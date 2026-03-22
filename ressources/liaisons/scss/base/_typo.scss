@@ -97,6 +97,7 @@ h1,
 .h1 { /* = 40px */
     font-size: 40px;
     font-size: 4rem;
+    line-height: 1.2;
 }
 @media (min-width: 600px) {
     h1,
@@ -137,6 +138,7 @@ h3,
 .h3 { /* = 20px */
     font-size: 20px;
     font-size: 2rem;
+    font-weight: normal;
 }
 @media (min-width: 600px) {
     h3,
@@ -148,8 +150,8 @@ h3,
 @media (min-width: 1000px) {
     h3,
     .h3 { /* = 40px */
-        font-size: 40px;
-        font-size: 4rem;
+        font-size: 30px;
+        font-size: 3rem;
     }
 }
 
@@ -157,6 +159,7 @@ h4,
 .h4 { /* = 18px */
     font-size: 18px;
     font-size: 1.8rem;
+    font-weight: normal;
 }
 @media (min-width: 600px) {
     h4,

@@ -17,7 +17,9 @@ html {
 //Entête
 .entete_titre{
     text-align: center;
+    margin-bottom: -0.5em;
 }
+
 
 //Slogan
 .entete_slogan{
@@ -55,6 +57,7 @@ html {
 .a_propos div{
     background-image:url(../images/zoneTexte.png);
     background-size: 100% 100%;
+    margin-bottom: 2em;
 }
 
 .a_propos div p{
@@ -74,7 +77,18 @@ html {
 
 //Sections
 .nouvelles{
-    background-color: burlywood;
+    background-image: url(../images/background.png);
+    background-size: 100% 100%;
+    padding: 0.5em 4em 7em 4em;
+}
+
+.nouvelles_titreSection{
+    text-align: center;
+    margin: 1em auto;
+}
+
+.nouvelles_titreSection h2{
+    margin-bottom: -1em;
 }
 
 .volets{
