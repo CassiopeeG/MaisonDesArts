@@ -20,8 +20,7 @@
             <a href="https://www.facebook.com/">
                 <img src="<?php echo get_template_directory_uri();?>/liaisons/images/logo_facebook.png" alt="lien facebook">
             </a>
-            <a href="">
-                <!-- <?php the_field("linkedin", 38)?> Ref mute temporairement -->
+            <a href="https://www.linkedin.com/">
                 <img src="<?php echo get_template_directory_uri();?>/liaisons/images/logo_linkedin.png" alt="lien linkedin">
             </a>
             
