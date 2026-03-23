@@ -933,13 +933,23 @@ html {
 /* LIEN */
 .article__lien {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 1em;
   text-decoration: none;
+}
+
+.article__lien:hover {
+  font-weight: bold;
 }
 
 .article__lien::after {
   content: " →";
   margin-left: 8px;
+}
+
+.page-header {
+  text-align: center;
+  background-image: url(../images/Entete-Nouvelles.png);
+  background-size: 100% 100%;
 }
 
 .titre_h2 {
@@ -1148,4 +1158,6 @@ html {
 
 .nav-next:hover {
   font-weight: bold;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
