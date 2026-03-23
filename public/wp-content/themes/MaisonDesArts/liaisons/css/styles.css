@@ -871,6 +871,12 @@ html {
   margin-left: 8px;
 }
 
+.page-header {
+  text-align: center;
+  background-image: url(../images/Entete-Nouvelles.png);
+  background-size: 100% 100%;
+}
+
 .titre_h2 {
   font-size: 2rem;
   color: blue;
@@ -1077,4 +1083,6 @@ html {
 
 .nav-next:hover {
   font-weight: bold;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

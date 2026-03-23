@@ -1,6 +1,7 @@
 
 .container-articles {
         grid-template-columns: 1fr;
+    
     }
 
 @media (min-width: 600px) {
@@ -35,3 +36,10 @@ font-weight: bold;
     content: " →";
     margin-left: 8px;
 }
+
+.page-header{
+    text-align: center;
+       background-image: url(../images/Entete-Nouvelles.png);
+    background-size: 100% 100%;
+}
+
