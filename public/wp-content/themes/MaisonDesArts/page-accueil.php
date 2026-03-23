@@ -18,18 +18,17 @@ get_header(); //Appel de l'inclusion d'entête de page
     <p><?php  the_content() ?></p>
     
     <section class="nouvelles">
-        <div class="nouvelles_titreSection">
+        <div class="section__titre">
             <h2>Section Nouvelles</h2>
-            <a class="nouvelles__lien" href="<?php the_permalink();?>">
-                <h3>Visitez toutes nos nouvelles
-                    <a class="article__lien" href="<?php the_permalink();?>"></a>
-                </h3>
-            </a>
+            
+            <h3>
+                <a class="section__lien" href="./nouvelles/" title="Visitez toutes nos nouvelles">Visitez toutes nos nouvelles</a>
+            </h3>
         </div>
             
         <div class="container-articles"><?php
         $posts = get_posts(array(
-            'posts_per_page' => -1,
+            'posts_per_page' => 2,
             'post_type' => 'post',
             'post_status' => 'publish',
             'orderby' => 'date',
@@ -67,29 +66,48 @@ get_header(); //Appel de l'inclusion d'entête de page
     </section>
 
     <section class="volets">
-        <h2>Section Volets</h2>
+        <div class="section__titre">
+            <h2>Section Volets</h2>
+                
+            <h3>
+                <a class="section__lien" href="./page-volets/" title="Visitez nos volets">Visitez nos volets culturels</a>
+            </h3>
+        </div>
 
-        <ul class="liste_volets">
-            
-        <?php
-        $posts = get_posts(array(
-            'posts_per_page' => -1,
-            'post_type'	=> 'services',
-            'post_status' => 'publish',
-            'orderby' => 'the_title',
-            'order' => 'ASC',
-        ));
+        <div class="volets__info">
+            <p>
+                Lorsque vous franchirez les portes de la Maison des arts, vous entrerez dans un univers où la culture prend vie. Ce lieu n’est pas seulement un bâtiment : c’est un écosystème créatif, pensé pour accueillir toutes les générations et toutes les disciplines artistiques.
+            </p>
 
-        if(have_posts()){
-            //tant qu'il restera des articles
-            foreach ($posts as $post){?>
-                <li class="volet_lien">
-                    <h3>
-                        <a class="volet__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
-                    </h3>
-                </li>
-            <?php }}?>
-        </ul>
+            <img class="volets__image" src="<?php echo get_template_directory_uri();?>/liaisons/images/volets_image.png" alt="Location physique des volets dans le presbytère. Les volets Lieu de vie et de rencontre ainsi que Médiation Culturel sont au premier étage. La création de résidence d'artistes sont au deuxième étage. ">
+        </div>
+
+        <div class="volets__liens">
+            <img class="volets__liens_image" src="<?php echo get_template_directory_uri();?>/liaisons/images/image_porte.png" alt="">
+
+            <ul class="volets__liens__liste">
+            <?php
+            $posts = get_posts(array(
+                'posts_per_page' => -1,
+                'post_type'	=> 'volets',
+                'post_status' => 'publish',
+                'orderby' => 'title',
+                'order' => 'ASC',
+            ));
+
+            if(have_posts()){
+                //tant qu'il restera des articles
+                foreach ($posts as $post){?>
+                    <li>
+                        <h3>
+                            <a class="article__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
+                        </h3>
+                    </li>
+                <?php }}?>
+            </ul>
+        </div>
+
+        
     </section>
 </main>
 

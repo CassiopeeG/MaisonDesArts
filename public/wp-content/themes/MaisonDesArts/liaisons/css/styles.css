@@ -805,7 +805,6 @@ html {
 .a_propos div {
   background-image: url(../images/zoneTexte.png);
   background-size: 100% 100%;
-  margin-bottom: 2em;
 }
 
 .a_propos div p {
@@ -822,20 +821,96 @@ html {
 }
 
 .nouvelles {
+  margin-top: 5em;
   background-image: url(../images/background.png);
-  background-size: 100% 100%;
+  background-size: 110% 100%;
   padding: 0.5em 4em 7em 4em;
 }
 
-.nouvelles_titreSection {
+.section__titre {
   text-align: center;
   margin: 1em auto;
 }
 
-.nouvelles_titreSection h2 {
+.section__titre h2 {
   margin-bottom: -1em;
 }
 
+.volets {
+  padding: 0.5em 2em 7em 0;
+}
+
+.volets__info {
+  margin-top: 1em;
+}
+
+@media (min-width: 1000px) {
+  .volets__info {
+    display: flex;
+    gap: 2em;
+    flex-direction: row;
+    margin-top: 1em;
+    padding: 1em 0 0 4em;
+  }
+}
+.volets__image {
+  width: 100%;
+  padding-left: 1em;
+}
+
+@media (min-width: 1000px) {
+  .volets__image {
+    width: 60%;
+    height: auto;
+    margin-top: -3em;
+  }
+}
+.volets__info p {
+  background-color: #F7DE99;
+  padding: 2em;
+  height: fit-content;
+}
+
+.volets__liens {
+  margin-top: -1em;
+}
+
+@media (min-width: 1000px) {
+  .volets__liens {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    padding: 0 1em 1em 0;
+  }
+}
+.volets__liens__liste {
+  max-width: fit-content;
+  margin: 0 auto;
+  width: 100%;
+  text-align: end;
+  list-style-type: none;
+}
+
+.volets__liens__liste h3 a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+.volets__liens__liste:nth-child(1) {
+  background-color: brown;
+}
+
+.volets__liens_image {
+  width: 0%;
+}
+
+@media (min-width: 1000px) {
+  .volets__liens_image {
+    height: auto;
+    width: 100%;
+  }
+}
 .container-articles {
   grid-template-columns: 1fr;
 }
@@ -858,8 +933,12 @@ html {
 /* LIEN */
 .article__lien {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 1em;
   text-decoration: none;
+}
+
+.article__lien:hover {
+  font-weight: bold;
 }
 
 .article__lien::after {
@@ -867,11 +946,23 @@ html {
   margin-left: 8px;
 }
 
+<<<<<<< HEAD
 .volets_page {
   padding: 40px 20px 80px 20px;
   display: grid;
   gap: 60px;
   background-color: #ffffff;
+=======
+.page-header {
+  text-align: center;
+  background-image: url(../images/Entete-Nouvelles.png);
+  background-size: 100% 100%;
+}
+
+.titre_h2 {
+  font-size: 2rem;
+  color: blue;
+>>>>>>> e00bab18a0025ab160b1656bf1add6ef36491a43
 }
 
 .volets_page_titre {
