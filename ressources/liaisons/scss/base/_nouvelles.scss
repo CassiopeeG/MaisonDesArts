@@ -15,7 +15,7 @@
     content: "";
     display: block;
     height: 1px;
-    background: #3a1f1f;
+    background: #000000;
     margin-top: 15px;
 }
 }
@@ -23,9 +23,13 @@
 /* LIEN */
 .article__lien {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 1em;
     text-decoration: none;
 }
+.article__lien:hover{
+font-weight: bold;    
+}
+
 
 .article__lien::after {
     content: " →";

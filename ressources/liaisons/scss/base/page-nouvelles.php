@@ -46,11 +46,12 @@ if($posts){
             <p class="article__texte">
                 <?php the_excerpt(); ?>
             </p>
-        <p>
-  <a class="article__lien" href="<?php the_permalink();?>">
-    Consulter l'article
-  </a>
-</p>
+            <p>Consulter l'article
+               <a class="article__lien" href="<?php the_permalink();?>">
+                </a>
+                </p>
+</a>
+
     
         </article>
 
