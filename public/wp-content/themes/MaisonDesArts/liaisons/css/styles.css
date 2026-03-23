@@ -927,6 +927,7 @@ html {
     display: block;
     height: 1px;
     background: #3a1f1f;
+    background: #000000;
     margin-top: 15px;
   }
 }
