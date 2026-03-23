@@ -7,6 +7,7 @@ echo "single.php";
 
  <?php the_post(); //nécessaire à the_author() et the_date()
    // var_dump($post); //Ce que reçoit la page?>
+
     <article class="article">
         <header class="article__entete">
             <h1 class="article__titre"><?php the_title() ?></h1>
