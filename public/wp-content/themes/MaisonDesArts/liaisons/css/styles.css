@@ -867,11 +867,331 @@ html {
   margin-left: 8px;
 }
 
-.titre_h2 {
-  font-size: 2rem;
-  color: blue;
+.volets_page {
+  padding: 40px 20px 80px 20px;
+  display: grid;
+  gap: 60px;
+  background-color: #ffffff;
 }
 
+.volets_page_titre {
+  margin: 0;
+  text-align: center;
+  font-family: "Verve";
+  font-size: 75px;
+  line-height: 1.1;
+}
+
+.volets_mise_en_avant {
+  position: relative;
+  width: 100%;
+  max-width: 1437px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-image: url("../images/fond-volets.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 40px;
+  min-height: 680px;
+}
+
+.volets_mise_en_avant::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+.volets_mise_en_avant_texte {
+  position: relative;
+  z-index: 2;
+  margin-right: -120px;
+  justify-self: end;
+}
+
+.volets_citation {
+  position: relative;
+  background: #e5c98b;
+  padding: 45px 55px;
+  width: 100%;
+  max-width: 430px;
+  box-shadow: 0px 50px 20px rgba(0, 0, 0, 0.25);
+}
+
+.volets_citation_contenu {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.volets_citation_contenu p {
+  margin: 0;
+  font-family: "Aleo";
+  font-size: 16px;
+}
+
+.volets_citation_guillemet_ouverture {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  font-size: 42px;
+  line-height: 1;
+  color: black;
+}
+
+.volets_citation_guillemet_fermeture {
+  position: absolute;
+  right: 22px;
+  bottom: 10px;
+  font-size: 42px;
+  line-height: 1;
+  color: black;
+}
+
+.volets_mise_en_avant_image {
+  position: relative;
+  z-index: 1;
+  justify-self: start;
+}
+
+.volets_image_hero img {
+  width: 80%;
+  max-width: 460px;
+  height: auto;
+  display: block;
+  border: 6px solid black;
+}
+
+.volets_separateur {
+  text-align: center;
+}
+
+.volets_separateur p {
+  font-family: "SwankyandMooMoo";
+  font-size: 40px;
+  margin: 0;
+}
+
+.volets_texte_intro {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.volets_bloc {
+  max-width: 1437px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 45px 55px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  column-gap: 0;
+  row-gap: 28px;
+  align-items: start;
+}
+
+.volets_bloc:nth-of-type(odd) {
+  background-color: #e5c98b;
+}
+
+.volets_bloc:nth-of-type(even) {
+  background-color: #c8d8eb;
+}
+
+.volets_bloc_image {
+  grid-column: 1;
+  grid-row: 1/3;
+  position: relative;
+  z-index: 3;
+}
+
+.volets_bloc_image img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+.volets_bloc_entete {
+  grid-column: 2;
+  margin-left: 95px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.volets_bloc_titre {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-family: "Verve";
+}
+
+.volets_bloc_lien {
+  text-decoration: none;
+  color: black;
+}
+
+.volets_bloc_texte {
+  grid-column: 2;
+  position: relative;
+  z-index: 1;
+  margin-left: -80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 25px;
+  padding: 40px 50px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 285px;
+}
+
+.volets_bloc:nth-of-type(odd) .volets_bloc_texte {
+  background-color: #CEE4FB;
+}
+
+.volets_bloc:nth-of-type(even) .volets_bloc_texte {
+  background-color: #F7DE99;
+}
+
+.volets_bloc_resume {
+  text-align: center;
+  line-height: 1.7;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.volets_bloc_date {
+  width: 204px;
+  height: 60px;
+  background-color: #5E7390;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.volets_bloc_lire {
+  margin-top: 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  font-family: "Aleo";
+}
+
+.volets_bloc_lire:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .volets_page_titre {
+    font-size: 60px;
+  }
+  .volets_mise_en_avant {
+    gap: 20px;
+  }
+  .volets_mise_en_avant_texte {
+    margin-right: -70px;
+  }
+  .volets_bloc {
+    grid-template-columns: 340px 1fr;
+    padding: 35px;
+  }
+  .volets_bloc_entete {
+    margin-left: 70px;
+  }
+  .volets_bloc_texte {
+    margin-left: -35px;
+    max-width: 560px;
+  }
+}
+@media (max-width: 800px) {
+  .volets_page {
+    padding: 30px 15px 60px 15px;
+    gap: 40px;
+  }
+  .volets_page_titre {
+    font-size: 44px;
+  }
+  .volets_mise_en_avant {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .volets_mise_en_avant_texte {
+    margin-right: 0;
+    justify-self: center;
+  }
+  .volets_mise_en_avant_image {
+    justify-self: center;
+  }
+  .volets_citation {
+    max-width: 100%;
+  }
+  .volets_bloc {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 25px;
+  }
+  .volets_bloc_image,
+  .volets_bloc_entete,
+  .volets_bloc_texte {
+    grid-column: auto;
+    grid-row: auto;
+    margin-left: 0;
+  }
+  .volets_bloc_image {
+    justify-self: center;
+  }
+  .volets_bloc_entete {
+    text-align: center;
+  }
+  .volets_bloc_texte {
+    max-width: 100%;
+    justify-self: center;
+    min-height: auto;
+  }
+  .volets_bloc_titre {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .volets_page_titre {
+    font-size: 34px;
+  }
+  .volets_citation {
+    padding: 35px 30px;
+  }
+  .volets_citation_guillemet_ouverture,
+  .volets_citation_guillemet_fermeture {
+    font-size: 34px;
+  }
+  .volets_bloc_titre {
+    font-size: 1.6rem;
+  }
+  .volets_bloc_texte {
+    padding: 30px 25px;
+  }
+  .volets_bloc_date {
+    width: 180px;
+    height: 52px;
+    font-size: 1.6rem;
+  }
+}
 /****** ------- MODULES ------- ******/
 /** Menu responsive **/
 /**
@@ -928,6 +1248,8 @@ html {
   display: block;
   padding: 5px 10px;
   width: 100%;
+  /*     outline: none;
+       border-left: 5px solid #f5ae09;*/
 }
 .menu-item a:link, .menu-item a:visited {
   text-decoration: none;
@@ -938,10 +1260,6 @@ html {
 }
 .menu-item a--actif {
   border-left: 5px solid #f4d07c;
-}
-.menu-item a {
-  /*     outline: none;
-       border-left: 5px solid #f5ae09;*/
 }
 
 /* Liste du menu */
@@ -1073,4 +1391,6 @@ html {
 
 .nav-next:hover {
   font-weight: bold;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
