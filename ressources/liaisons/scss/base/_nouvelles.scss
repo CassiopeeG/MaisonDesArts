@@ -21,21 +21,26 @@
 }
 }
 
+
+.article__padding{
+    padding: 0em 4em 0em 4em;
+}
+
+
 /* LIEN */
 .article__lien {
     display: inline-block;
     margin-top: 1em;
-    text-decoration: none;
+    text-decoration: underline;
+    color:#000000;
+    
 }
 .article__lien:hover{
 font-weight: bold;    
 }
 
 
-.article__lien::after {
-    content: " →";
-    margin-left: 8px;
-}
+// NOUVELLES
 
 .page-header{
     text-align: center;
@@ -53,4 +58,19 @@ font-weight: bold;
     text-align: center;
 }
 
+.article__date--div{
+background-image: url(../images/Ellipse_dateArticle.png); 
+  background-repeat: no-repeat;
+    background-size: 15% 100%;
+}
+.article__date{
+    padding-left: 25px !important;
+    color: white;
+    padding:1rem;
+}
+
+
+.article__piedPage{
+    padding-bottom: 1rem;
+}
 

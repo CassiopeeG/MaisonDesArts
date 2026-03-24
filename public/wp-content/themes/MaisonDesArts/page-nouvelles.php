@@ -31,6 +31,7 @@ if($posts){
         setup_postdata($post); ?>
         
         <article class="article">
+            <div class="article__padding">
 
          <?php if(has_post_thumbnail()){ ?>
                 <div class="article__imageUne">
@@ -48,10 +49,10 @@ if($posts){
             </p>
         <p>
   <a class="article__lien" href="<?php the_permalink();?>">
-    Consulter l'article
+    Consulter l'article →
   </a>
 </p>
-    
+</div>
         </article>
 
     <?php }

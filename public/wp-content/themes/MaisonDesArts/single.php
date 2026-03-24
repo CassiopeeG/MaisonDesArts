@@ -24,15 +24,17 @@ echo "single.php";
 <?php } ?>
 	   
 	   
-
+<div class="article__padding">
         <p class="article__texte">
             <?php  the_content() ?>
         </p>
         <footer class="article__piedPage">
-            <h4>Par: <?php the_author(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
-            <h4>  Publié le: <?php the_date(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
+            <h4 class="article__author">Par: <?php the_author(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
+            <div class="article__date--div">
+            <h4 class="article__date"><?php the_date(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
+</div>
         </footer>
-
+</div>
                     <p>
                 <?php //Version améliorée avec flèche et titre des articles adjacents.
                 the_post_navigation( array(
