@@ -911,6 +911,27 @@ html {
     width: 100%;
   }
 }
+.fil_ariane {
+  margin-left: 1em;
+}
+
+@media (min-width: 600px) {
+  .fil_ariane {
+    margin-left: 4em;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+}
+.fil_ariane li {
+  list-style: none;
+}
+
+.fil_ariane li a {
+  text-decoration: none;
+  color: black;
+}
+
 .container-articles {
   grid-template-columns: 1fr;
 }
@@ -1504,6 +1525,4 @@ html {
 
 .nav-next:hover {
   font-weight: bold;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

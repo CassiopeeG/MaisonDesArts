@@ -25,5 +25,29 @@
     <nav id="principal" class="navigation menu__principal">
         <?php wp_nav_menu(array('theme_location' => 'principal'));?>
     </nav>
-    <?php } ?>
+
+    <!-- Fils d'ariane -->
+    <?php } 
+
+    //Récuperer l'URL
+    global $wp;
+    $StringURL = home_url( add_query_arg( array(), $wp->request ) );
+
+    //Le séparer en un tableau
+    $ArrayStringURL = explode("/", $StringURL);
+
+    if($StringURL != "https://timunix3.csfoy.ca/~equipe_accolade/public/"){ ?>
+    <ul class="fil_ariane">
+        <li>
+            <a href="https://timunix3.csfoy.ca/~equipe_accolade/public/">Accueil</a>
+        </li>
+    <?php 
+    
+    for($i=5; $i < count($ArrayStringURL); $i++){; ?>
+        <li>
+            <a href="">/ <?php echo $ArrayStringURL[$i] ?></a>
+        </li>
+        <?php }; ?>
+    </ul>
+    <?php }?>
 </header>
