@@ -932,6 +932,10 @@ html {
   color: black;
 }
 
+h3 a {
+  color: black;
+}
+
 .container-articles {
   grid-template-columns: 1fr;
 }

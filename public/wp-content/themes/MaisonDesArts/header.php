@@ -36,7 +36,8 @@
     //Le séparer en un tableau
     $ArrayStringURL = explode("/", $StringURL);
 
-    if($StringURL != "https://timunix3.csfoy.ca/~equipe_accolade/public/"){ ?>
+    //Vérifier si sur page accueil
+    if($StringURL != "https://timunix3.csfoy.ca/~equipe_accolade/public"){ ?>
     <ul class="fil_ariane">
         <li>
             <a href="https://timunix3.csfoy.ca/~equipe_accolade/public/">Accueil</a>
