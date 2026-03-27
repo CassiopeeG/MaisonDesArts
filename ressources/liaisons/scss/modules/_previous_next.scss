@@ -1,0 +1,29 @@
+.nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+  display: flex;
+}
+
+.nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  flex: 1 0 50%;
+}
+
+.nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  text-align: end;
+  flex: 1 0 50%;
+}
+
+.nav-previous:hover{
+font-weight: bold;   
+}
+
+.nav-next:hover{
+font-weight: bold;    
+}
+
+
+

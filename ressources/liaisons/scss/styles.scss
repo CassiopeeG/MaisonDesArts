@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/**
+ * @author Cassiopée Gariépy, Alice Tremblay et Moussa Said Awali
+ * @todo Lier les modules avec des instructions @import
+ * @todo Compléter selon l'énoncé de l'exercice
+ */
+
+/****** ------- UTILITAIRES ------- ******/
+/** Normalize **/
+@import 'utilitaires/normalize';
+
+/**** UTILITAIRES ****/
+@import 'utilitaires/utilitaires';
+
+
+/****** ------- BASE ------- ******/
+/** Typographie **/
+@import 'base/typo';
+
+// Grille
+@import 'base/grille';
+
+// Accueil
+@import 'base/accueil';
+
+// Nouvelles
+@import 'base/nouvelles';
+
+// volets 
+@import 'base/volets';
+
+
+/****** ------- MODULES ------- ******/
+/** Menu responsive **/
+@import 'modules/menuwp';
+
+/** Menu responsive **/
+@import 'modules/footer';
+
+@import 'modules/previous_next';
+
