@@ -1,6 +1,6 @@
 <?php
 get_header();
-echo "single.php";
+// echo "single.php";
 ?>
 
 <main class="page">
@@ -9,6 +9,9 @@ echo "single.php";
    // var_dump($post); //Ce que reçoit la page?>
 
     <article class="article">
+        <a class="lien__retour--nouvelles" href="<?php echo get_permalink(get_page_by_path('nouvelles')); ?>">
+    ← Retour aux nouvelles
+</a>
         <header class="article__entete">
             <h1 class="article__titre-single"><?php the_title() ?></h1>
         </header>

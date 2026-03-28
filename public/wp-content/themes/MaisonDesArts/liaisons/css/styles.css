@@ -971,6 +971,15 @@ h3 a {
   font-weight: bold;
 }
 
+.lien__retour--nouvelles {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.lien__retour--nouvelles:hover {
+  font-weight: bold;
+}
+
 .page-header {
   text-align: center;
   background-image: url(../images/Entete.png);
