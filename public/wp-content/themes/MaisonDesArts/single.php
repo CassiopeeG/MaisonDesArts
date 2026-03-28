@@ -10,7 +10,7 @@ echo "single.php";
 
     <article class="article">
         <header class="article__entete">
-            <h1 class="article__titre"><?php the_title() ?></h1>
+            <h1 class="article__titre-single"><?php the_title() ?></h1>
         </header>
 		
 		
@@ -18,7 +18,7 @@ echo "single.php";
  <?php if(has_post_thumbnail()){?>
         <div class="article__imageUne-Single">
             <?php //affiche l'image de l'article
-            the_post_thumbnail("full"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
+            the_post_thumbnail("image-article-single"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
 
         </div>
 <?php } ?>

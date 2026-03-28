@@ -111,5 +111,6 @@ add_action( 'init', 'agence_equipe_custom_post', 0 );
 /* Ajout de nouveaux formats d'images générés par WordPress */
 if(function_exists ( "add_image_size" )){
 add_image_size( "image-article", 550, 400, true);
+add_image_size("image-article-single", 900, 600, true);
 }
 ?>
