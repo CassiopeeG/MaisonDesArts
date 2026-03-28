@@ -54,21 +54,28 @@ font-weight: bold;
         background-size: 100% 100%;
 }
 
-.article__imageUne{
+.article__imageUne-Carte{
     text-align: center;
 }
 
-.article__date--div{
-background-image: url(../images/Ellipse_dateArticle.png); 
-  background-repeat: no-repeat;
-    background-size: 15% 100%;
-}
-.article__date{
-    padding-left: 25px !important;
-    color: white;
-    padding:1rem;
+.article__imageUne-Single{
+    text-align: center;
 }
 
+.article__date--div {
+    display: inline-block;
+    background-image: url(../images/Ellipse_dateArticle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 0.5rem 1.5rem;
+}
+
+.article__date {
+    color: white;
+    white-space: nowrap;
+
+}
 
 .article__piedPage{
     padding-bottom: 1rem;

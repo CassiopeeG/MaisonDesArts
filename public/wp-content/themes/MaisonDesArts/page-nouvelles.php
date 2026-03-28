@@ -34,7 +34,7 @@ if($posts){
             <div class="article__padding">
 
          <?php if(has_post_thumbnail()){ ?>
-                <div class="article__imageUne">
+                <div class="article__imageUne-Carte">
                     <?php the_post_thumbnail("image-article"); ?>
                 </div>
             <?php } ?>
@@ -42,6 +42,9 @@ if($posts){
                 <h2 class="article_titre">
                         <?php the_title(); ?>
                 </h2>
+             <div class="article__date--div">
+            <h4 class="article__date"><?php the_date(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
+</div>
             </header>
 
             <p class="article__texte">
