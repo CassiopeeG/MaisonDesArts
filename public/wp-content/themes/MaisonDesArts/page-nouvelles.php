@@ -2,10 +2,10 @@
 /* Template Name: Nouvelles */
 get_header();
 
-echo "page-nouvelles.php";
+// echo "page-nouvelles.php";
 ?>
 
-<main class="page-nouvelles">
+<main class="page">
 
     <!-- Titre de la page -->
     <section class="page-header">
