@@ -44,9 +44,6 @@
 }
 
 .footer__informations{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     gap: 1em;
     padding: 1em;
     max-width: 800px;
@@ -54,19 +51,30 @@
     text-align: left;
 }
 
-.footer__informations div{
-    
-} 
-
-
-.footer__informations-adresse{
-
+@media (min-width: 600px){
+    .footer__informations{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 .footer__informations-contact{
     border: black solid;
-    border-width: 0 2px 0 2px;
-    padding: 0 2em 0 2em;
+    border-width: 2px 0 2px 0;
+    padding-bottom: 1em;
+}
+
+@media (min-width: 600px){
+    .footer__informations-contact{
+        border-width: 0 2px 0 2px;
+        padding: 0 2em 0 2em;
+    }
+}
+
+.footer__informations-contact a{
+    padding-right: 1em;
+    text-decoration: none;
 }
 
 .footer__mentions{

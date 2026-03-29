@@ -17,10 +17,10 @@
         <div class="footer__informations-contact">
             <p>Nous contacter: </p>
             <p>lepresbytere.arts@gmail.com</p>
-            <a href="https://www.facebook.com/">
+            <a href="<?php the_field("lien_facebook", 69)?>">
                 <img src="<?php echo get_template_directory_uri();?>/liaisons/images/logo_facebook.png" alt="lien facebook">
             </a>
-            <a href="https://www.linkedin.com/">
+            <a href="<?php the_field("lien_linkedin", 69)?>">
                 <img src="<?php echo get_template_directory_uri();?>/liaisons/images/logo_linkedin.png" alt="lien linkedin">
             </a>
             

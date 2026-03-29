@@ -70,7 +70,7 @@ get_header(); //Appel de l'inclusion d'entête de page
             <h2>Section Volets</h2>
                 
             <h3>
-                <a class="section__lien" href="./page-volets/" title="Visitez nos volets">Visitez nos volets culturels</a>
+                <a class="section__lien" href="./volets-culturels/" title="Visitez nos volets">Visitez nos volets culturels</a>
             </h3>
         </div>
 
@@ -100,7 +100,7 @@ get_header(); //Appel de l'inclusion d'entête de page
                 foreach ($posts as $post){?>
                     <li>
                         <h3>
-                            <a class="article__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
+                            <a class="article__lien" href="<?php the_permalink();?>"><?php the_title()?> →</a>
                         </h3>
                     </li>
                 <?php }}?>
