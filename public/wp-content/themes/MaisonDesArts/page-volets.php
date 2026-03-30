@@ -15,15 +15,17 @@ $image_hero = get_field('image_hero_volets', $page_id);
     <section class="volets_mise_en_avant">
 
         <div class="volets_mise_en_avant_texte">
-            <div class="volets_citation">
-                <span class="volets_citation_guillemet_ouverture">❝</span>
+            <?php if ($citation) { ?>
+                <div class="volets_citation">
+                    <span class="volets_citation_guillemet_ouverture">❝</span>
 
-                <div class="volets_citation_contenu">
-                    <?php echo $citation; ?>
+                    <div class="volets_citation_contenu">
+                        <?php echo $citation; ?>
+                    </div>
+
+                    <span class="volets_citation_guillemet_fermeture">❞</span>
                 </div>
-
-                <span class="volets_citation_guillemet_fermeture">❞</span>
-            </div>
+            <?php } ?>
         </div>
 
         <div class="volets_mise_en_avant_image">
@@ -70,30 +72,40 @@ $image_hero = get_field('image_hero_volets', $page_id);
                     </div>
                 <?php } ?>
 
-                <header class="volets_bloc_entete">
-                    <h3 class="volets_bloc_titre">
-                        <a class="volets_bloc_lien" href="<?php the_permalink(); ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </h3>
-                </header>
+                <div class="volets_bloc_contenu">
+                    <header class="volets_bloc_entete">
+                        <h3 class="volets_bloc_titre">
+                            <a class="volets_bloc_lien" href="<?php the_permalink(); ?>">
+                                <?php the_title(); ?>
+                            </a>
+                        </h3>
+                    </header>
 
-             <div class="volets_bloc_texte">
-    <p class="volets_bloc_resume">
-        <?php
-        $texte = get_field('texte_volet', get_the_ID());
-        echo wp_trim_words(strip_tags($texte), 25, '...');
-        ?>
-    </p>
+                    <div class="volets_bloc_texte">
+                        <p class="volets_bloc_resume">
+                            <?php
+                            $texte = get_field('texte_volet', get_the_ID());
+                            echo wp_trim_words(strip_tags($texte), 25, '...');
+                            ?>
+                        </p>
 
-    <p class="volets_bloc_date">
-        <?php echo get_field('date_volet', get_the_ID()); ?>
-    </p>
+                        <div class="volets_bloc_infos">
+                            <p class="volets_bloc_date">
+                                <?php
+                                $date = get_field('date_volet', get_the_ID());
+                                if ($date) {
+                                    $date_formattee = DateTime::createFromFormat('Ymd', $date);
+                                    echo date_i18n('j F Y', $date_formattee->getTimestamp());
+                                }
+                                ?>
+                            </p>
 
-    <a class="volets_bloc_lire" href="<?php the_permalink(); ?>">
-        Lire l’article complet →
-    </a>
-</div>
+                            <a class="volets_bloc_lire" href="<?php the_permalink(); ?>">
+                                Lire l’article complet →
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
             </article>
 
