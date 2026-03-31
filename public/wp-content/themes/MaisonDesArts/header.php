@@ -18,6 +18,9 @@
 </head>
 
 <body>
+<!-- lien aller au contenu -->
+<a href="#contenu" class="visuallyhidden focusable">Aller au contenu</a>
+
     <!-- <?php echo "header.php";?> -->
 <header class="entente">
     <?php if(has_nav_menu('principal')){?>

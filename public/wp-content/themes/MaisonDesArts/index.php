@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php echo "index.php";?>
 
-<main class="page">
+<main class="page" id="contenu">
 <?php 
 if(have_posts()){
     while(have_posts()){

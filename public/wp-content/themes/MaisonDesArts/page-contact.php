@@ -4,7 +4,7 @@ get_header(); //Appel de l'inclusion d'entête de page
 echo "page-contact.php";
 ?>
 
-    <main class="page">
+    <main class="page" id="contenu">
 
         <?php //var_dump($post); //Ce que reçoit la page?>
 

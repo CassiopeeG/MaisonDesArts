@@ -5,7 +5,7 @@ get_header();
 // echo "page-nouvelles.php";
 ?>
 
-<main class="page">
+<main class="page"  id="contenu">
 
     <!-- Titre de la page -->
     <section class="page-header">

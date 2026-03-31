@@ -8,7 +8,7 @@ $texte_intro = get_field('texte_intro_volets', $page_id);
 $image_hero = get_field('image_hero_volets', $page_id);
 ?>
 
-<main class="volets_page">
+<main class="volets_page"  id="contenu">
 
     <h2 class="volets_page_titre">Un lieu culturel <br> complet : nos 4 volets</h2>
 
