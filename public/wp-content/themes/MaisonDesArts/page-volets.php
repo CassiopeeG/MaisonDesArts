@@ -95,7 +95,8 @@ $image_hero = get_field('image_hero_volets', $page_id);
                                 $date = get_field('date_volet', get_the_ID());
                                 if ($date) {
                                     $date_formattee = DateTime::createFromFormat('Ymd', $date);
-                                    echo date_i18n('j F Y', $date_formattee->getTimestamp());
+                                    // echo date_i18n('j F Y', $date_formattee->getTimestamp());
+                                    // à réparer ici!!!
                                 }
                                 ?>
                             </p>
