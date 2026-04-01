@@ -22,7 +22,7 @@ get_header(); //Appel de l'inclusion d'entête de page
             <h2>Section Nouvelles</h2>
             
             <h3>
-                <a class="section__lien" href="./nouvelles/" title="Visitez toutes nos nouvelles">Visitez toutes nos nouvelles</a>
+                <a class="section__lien article__lien" href="./nouvelles/" title="Visitez toutes nos nouvelles">Visitez toutes nos nouvelles →</a>
             </h3>
         </div>
             
@@ -79,7 +79,7 @@ get_header(); //Appel de l'inclusion d'entête de page
             <h2>Section Volets</h2>
                 
             <h3>
-                <a class="section__lien" href="./volets-culturels/" title="Visitez nos volets">Visitez nos volets culturels</a>
+                <a class="section__lien article__lien" href="./volets-culturels/" title="Visitez nos volets">Visitez nos volets culturels →</a>
             </h3>
         </div>
 
