@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="page">
+<main class="page" id="contenu">
     <?php echo "home.php";?>
 
 <h2>Section Nouvelles</h2>

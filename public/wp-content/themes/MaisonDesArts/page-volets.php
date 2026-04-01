@@ -8,7 +8,7 @@ $texte_intro = get_field('texte_intro_volets', $page_id);
 $image_hero = get_field('image_hero_volets', $page_id);
 ?>
 
-<main class="volets_page">
+<main class="volets_page"  id="contenu">
 
     <h2 class="volets_page_titre">Un lieu culturel <br> complet : nos 4 volets</h2>
 
@@ -95,7 +95,8 @@ $image_hero = get_field('image_hero_volets', $page_id);
                                 $date = get_field('date_volet', get_the_ID());
                                 if ($date) {
                                     $date_formattee = DateTime::createFromFormat('Ymd', $date);
-                                    echo date_i18n('j F Y', $date_formattee->getTimestamp());
+                                    // echo date_i18n('j F Y', $date_formattee->getTimestamp());
+                                    // à réparer ici!!!
                                 }
                                 ?>
                             </p>

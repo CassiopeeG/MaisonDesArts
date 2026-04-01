@@ -9,7 +9,7 @@ get_header(); //Appel de l'inclusion d'entête de page
     </picture>
 <?php } ?>
 
-<main class="page">
+<main class="page" id="contenu">
     <!-- H1 -->
     <h1 class=entete_titre>
         <a href="<?php bloginfo("url");?>" title="<?php the_title()?>"><?php the_title()?></a>

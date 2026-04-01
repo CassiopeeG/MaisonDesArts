@@ -3,7 +3,7 @@ get_header();
 
 echo "404.php" ?>
 
-<main class="page">
+<main class="page"  id="contenu">
     <h2> Oups ! la page demandée n'existe pas !</h2>
 
     <p>On as-tu mal nommé quelque chose?</p>

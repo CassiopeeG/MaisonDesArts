@@ -3,7 +3,7 @@ get_header();
 // echo "single.php";
 ?>
 
-<main class="page">
+<main class="page"  id="contenu">
 
  <?php the_post(); //nécessaire à the_author() et the_date()
    // var_dump($post); //Ce que reçoit la page?>
