@@ -964,6 +964,7 @@ h3 a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    padding-top: 2em;
   }
   /* LIGNE SOUS TITRE */
   .article_titre::after {
@@ -975,9 +976,14 @@ h3 a {
   }
 }
 .article__padding {
-  padding: 0em 4em 0em 4em;
+  padding: 0em 1em 0em 1em;
 }
 
+@media (min-width: 800px) {
+  .article__padding {
+    padding: 0em 4em 0em 4em;
+  }
+}
 /* LIEN */
 .article__lien {
   display: inline-block;
@@ -2228,6 +2234,16 @@ nav.single_volets_navigation a:hover {
 
 .nav-next:hover {
   font-weight: bold;
+}
+
+.nav-next a,
+.nav-previous a {
+  color: black;
+}
+
+.nav-next a:hover,
+.nav-previous a:hover {
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

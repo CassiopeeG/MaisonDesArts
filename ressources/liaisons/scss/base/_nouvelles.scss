@@ -9,6 +9,7 @@
      display: grid; 
      grid-template-columns: repeat(2, 1fr); 
      gap: 40px; 
+     padding-top: 2em;
     }
 
     /* LIGNE SOUS TITRE */
@@ -23,9 +24,13 @@
 
 
 .article__padding{
+    padding: 0em 1em 0em 1em;
+}
+@media (min-width: 800px) {
+    .article__padding{
     padding: 0em 4em 0em 4em;
 }
-
+}
 
 /* LIEN */
 .article__lien {
