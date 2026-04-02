@@ -18,9 +18,10 @@ $total_pages = ceil($total_posts / $articles_par_page);
 ?>
 
 <main class="single_volets_page"  id="contenu">
-<h1 class="page-header"><?php the_title(); ?></h1>
+
     <?php if ($posts) { ?>
         <?php foreach ($posts as $post) { ?>
+        <h1 class="page-header"><?php the_title(); ?></h1>
             <?php setup_postdata($post); ?>
 
             <?php
