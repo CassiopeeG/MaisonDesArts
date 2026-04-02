@@ -1,7 +1,7 @@
 <?php
 get_header();
 
-$page_courante = get_query_var('paged') ? get_query_var('paged') : 1;
+$page_courante = isset($_GET['paged']) ? (int) $_GET['paged'] : 1;
 $articles_par_page = 2;
 
 $posts = get_posts(array(
@@ -21,8 +21,8 @@ $total_pages = ceil($total_posts / $articles_par_page);
 
     <?php if ($posts) { ?>
         <?php foreach ($posts as $post) { ?>
-        <h1 class="page-header"><?php the_title(); ?></h1>
             <?php setup_postdata($post); ?>
+            <h1 class="page-header"><?php the_title(); ?></h1>
 
             <?php
             $image_info = get_field('photo_1', get_the_ID());
@@ -87,13 +87,13 @@ $total_pages = ceil($total_posts / $articles_par_page);
 
             <div class="nav-previous">
                 <?php if ($page_courante > 1) { ?>
-                    <a href="<?php echo get_pagenum_link($page_courante - 1); ?>">← Consulter l’article précédent</a>
+                    <a href="?paged=<?php echo $page_courante - 1; ?>">← Consulter l’article précédent</a>
                 <?php } ?>
             </div>
 
             <div class="nav-next">
                 <?php if ($page_courante < $total_pages) { ?>
-                    <a href="<?php echo get_pagenum_link($page_courante + 1); ?>">Consulter l’article suivant →</a>
+                    <a href="?paged=<?php echo $page_courante + 1; ?>">Consulter l’article suivant →</a>
                 <?php } ?>
             </div>
 
